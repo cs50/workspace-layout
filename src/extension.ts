@@ -59,7 +59,7 @@ export async function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(
       `${EXTENSION_NAME}.openFolder`,
       function (fileUri) {
-        vscode.commands.executeCommand("vscode.openFolder", fileUri, false);
+        vscode.commands.executeCommand("vscode.openFolder", fileUri, { forceNewWindow: true });
       }
     )
   );
